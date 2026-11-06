@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Bharat Ekta Yuva Chunav - Fighting Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+        <div id="ui-overlay">
+            <div id="menu-screen" class="screen active">
+                <h1>Bharat Ekta Yuva Chunav</h1>
+                <p>Choose your fighter!</p>
+                <button id="play-btn">Play</button>
+            </div>
+            <div id="character-select-screen" class="screen">
+                <h2>Select Your Fighter</h2>
+                <div id="characters-container"></div>
+            </div>
+            <div id="battle-screen" class="screen">
+                <div class="hud">
+                    <div id="player-health" class="health-bar">
+                        <div class="health-fill"></div>
+                        <span id="player-health-text">100</span>
+                    </div>
+                    <div id="opponent-health" class="health-bar">
+                        <div class="health-fill"></div>
+                        <span id="opponent-health-text">100</span>
+                    </div>
+                </div>
+                <div id="round-counter">Round 1</div>
+            </div>
+            <div id="results-screen" class="screen">
+                <h2 id="results-text">Round Winner!</h2>
+                <button id="play-again-btn">Play Again</button>
+                <button id="main-menu-btn">Main Menu</button>
+            </div>
+            <div id="game-over-screen" class="screen">
+                <h2 id="game-over-text">Game Over!</h2>
+                <p id="final-winner"></p>
+                <button id="restart-btn">Play Again</button>
+            </div>
+        </div>
+        <div id="touch-controls" class="mobile-controls">
+            <div id="joystick" class="joystick">
+                <div class="joystick-base">
+                    <div class="joystick-knob"></div>
+                </div>
+            </div>
+            <div class="attack-buttons">
+                <button id="light-attack" class="attack-btn">J</button>
+                <button id="heavy-attack" class="attack-btn">K</button>
+                <button id="special-attack" class="attack-btn">L</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/characters.js"></script>
+    <script src="js/combat.js"></script>
+    <script src="js/audio.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
